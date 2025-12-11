@@ -18,8 +18,8 @@ Certifique-se de ter o Python instalado. A biblioteca `requests` é necessária.
 
 1.  Clone o repositório:
     ```bash
-    git clone 
-    cd SeuRepositorio
+    git clone https://github.com/andremonteirodaniel/-Directory-Brute-Forcer.git
+    cd -Directory-Brute-Forcer.git
     ```
 2.  Instale as dependências:
     ```bash
@@ -32,4 +32,9 @@ Execute o script fornecendo a URL alvo e o caminho para o arquivo da *wordlist* 
 
 ```bash
 python dirbrute.py <URL_ALVO> <CAMINHO_WORDLIST>
-# Exemplo: python dirbrute.py [http://exemplo.com](http://exemplo.com) /caminho/para/wordlist.txt
+
+## **Detalhes Técnicos Importantes**
+
+* Utiliza a biblioteca `requests` para enviar requisições GET para as URLs geradas.
+* Verifica o código de status HTTP da resposta (`response.status_code`).
+* O alvo é considerado "encontrado" se o código de status for diferente de 404.
